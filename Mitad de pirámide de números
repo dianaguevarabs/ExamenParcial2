@@ -1,0 +1,19 @@
+// Mitad de pirámide de números Diana Guevara 181864
+
+#include <stdio.h>
+int main() 
+{
+    int i,j,altura;
+    printf ("Introduzca la altura de la piramide:\n");
+    scanf ("%d", &altura);
+    printf ("\n");
+    for (int i = 1; i <= altura; i++) 
+	{
+        for (int j = 1; j <= i; j++) 
+		{
+            printf("%d ", j);
+        }
+        printf("\n");
+    }
+    return 0;
+}
