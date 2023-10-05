@@ -1,0 +1,42 @@
+//Operaciones aleatorias Diana Guevara 181864
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main() 
+{
+    srand(time(NULL));
+    int operacion = 0;
+    while (operacion != 5) 
+	{ 
+        operacion = rand() % 5 + 1; 
+        int numero1 = rand() % 11; 
+        int numero2 = rand() % 11; 
+        float resultado;
+        switch (operacion) 
+		{
+            case 1:
+                resultado = numero1 + numero2;
+                printf ("Suma: %d + %d =  %f\n", numero1, numero2, resultado);
+                break;
+            case 2:
+                resultado = numero1 - numero2;
+                printf ("Resta: %d - %d =  %f\n", numero1, numero2, resultado);
+                break;
+            case 3:
+                resultado = numero1 * numero2;
+                printf ("Multiplicacion: %d * %d =  %f\n", numero1, numero2, resultado);
+                break;
+            case 4:
+                resultado = numero1 / numero2;
+                printf ("Division: %d / %d =  %f\n", numero1, numero2, resultado);
+                break;
+            case 5:
+                printf ("Termino el programa\n");
+                break;
+            default:
+                printf ("Opcion incorrecta\n");
+        }
+    }
+    return 0;
+}
